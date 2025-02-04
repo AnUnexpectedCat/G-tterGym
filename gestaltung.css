@@ -1,0 +1,283 @@
+html{
+    display: flex;
+    justify-content: center;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(bilder/tempel_03.jpg);
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size:fixed;
+    background-attachment:scroll;
+    background-color:#f0d1c9;
+    
+}
+
+@font-face {
+    font-family: 'ceasar';
+    src: url(schrift/caesar-dressing.regular.ttf);
+    font-size:medium;
+    font-weight: 100;
+}
+
+
+@font-face {
+    font-family: 'gelio';
+    src: url(schrift/Gelio\ Pasteli.ttf);
+    font-size:medium;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'gelio-fett';
+    src: url(schrift/Gelio\ Fasolada.ttf);
+    font-size:larger;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'romanica';
+    src: url(schrift/Romanica.ttf);
+    font-size:medium;
+    font-weight: 100;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+h1{
+    color: #fff;
+    font-family: 'ceasar';
+    font-size: 9rem;
+}
+
+h2{
+    font-family: 'gelio-fett', sans-serif;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3{
+    font-family: 'ceasar';
+    text-align: center;
+}
+
+p{
+    font-family:'romanica';
+    font-weight: medium;
+    font-size: 1,2rem;
+    text-align: left;
+    color: #ffffff;
+    text-align: center;
+}
+
+.unternav li{
+    text-decoration: none;
+    color: currentColor;
+    list-style-type:lower-greek;
+    text-align: start;
+    list-style-position: inside;
+    padding: 0.5rem;
+}
+
+
+
+.unternav ul{
+    color: rgb(255, 255, 255);
+    display: block;
+    background-color: #0D5EAF;
+    margin-inline: 10rem;
+    padding: 0.5rem;
+    justify-content: center;
+    border: #d2d7df 2px solid;
+    margin-bottom: 3rem;
+    
+}
+
+.nav {
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+    min-width: 300px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content:center;
+    justify-content: space-between;
+    gap: 0,5em;
+}
+
+.link {
+    color:#d2d7df;
+    padding: 5px 10px 5px 10px;
+    background-color: #7f7880;
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column; 
+}
+
+
+
+.aktiver-link{
+    color:#fff;
+   box-shadow: 0px 8px #4a4854;
+}
+
+.trainer {
+    padding-left: 2em;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    gap: 3em;
+    
+    margin-bottom: 2em;
+    
+}
+
+
+
+.ueberschrift{
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'ceasar';
+}
+
+
+
+.container {
+    width: min-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+    position: relative;
+    border-radius: 10px;
+    border: 5px solid #d2d7df;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.namen {
+    gap: 60px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    position: absolute;
+    opacity: 0;
+    color: #0D5EAF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container:hover .namen {
+    opacity: 1;
+    transition: all 1s;
+    
+}
+
+.container:hover{
+    border: 5px solid #ffffff;
+    transition: all 1s;
+}
+
+.poseidon{
+    color: #0d4fa5;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem;
+}
+
+.menu td{
+    color: #d2d7df;
+    text-align:left;
+    padding: 1rem 2rem 1rem 1rem;
+    background-color: #0D5EAF;
+    border-radius: 10px;
+    
+}
+
+.menu th{
+    color:#fff;
+    text-align: left;
+    border-bottom: 2px solid ;
+    font-family: 'ceasar';
+    font-size: larger;
+    padding: 2px;
+    padding-left: 1rem;
+}
+
+.menu td:hover {
+    transition: all 0.5s;
+    background-color:#073c80;
+    overflow: hidden;
+    color:#fff;
+}
+
+
+
+.zeitplan{
+    margin: 100px auto;
+    width: 100%;
+    height: 50%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-collapse: separate;
+    /* border-radius: 10px;*/
+    border: 2px solid #d2d7df;
+    background-color: #0D5EAF;
+    overflow: hidden;
+}
+
+.zeitplan th {
+    font-family: 'romanica';
+    background-color: #073c80;
+    color: #fff;
+    padding: 2px;
+    padding-left: 10px;
+    text-align: left;
+    border-bottom: 2px solid #d2d7df;
+    
+}
+
+.zeitplan td{
+    font-family: 'romanica';
+    color:#d2d7df;
+    padding: 5px 5px 5px 10px;
+    text-align: left;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.zeitplan tr:hover {
+    transition: all 0.5s;
+    background-color:#073c80;
+}
+
+.zeitplan td:hover {
+    color:#fff;
+
+}

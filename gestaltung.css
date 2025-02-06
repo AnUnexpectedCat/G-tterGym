@@ -1,7 +1,6 @@
 html{
     display: flex;
     justify-content: center;
-    
 }
 
 * {
@@ -19,7 +18,7 @@ body{
     background-size:fixed;
     background-attachment:scroll;
     background-color:#f0d1c9;
-    
+    margin-bottom: 5rem;
 }
 
 @font-face {
@@ -68,11 +67,13 @@ h2{
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 40px;
+    color: #fff;
 }
 
 h3{
     font-family: 'ceasar';
     text-align: center;
+    color: #fff;
 }
 
 p{
@@ -84,28 +85,10 @@ p{
     text-align: center;
 }
 
-.unternav li{
-    text-decoration: none;
-    color: currentColor;
-    list-style-type:lower-greek;
-    text-align: start;
-    list-style-position: inside;
-    padding: 0.5rem;
+ul{
+    color: #fff;
 }
 
-
-
-.unternav ul{
-    color: rgb(255, 255, 255);
-    display: block;
-    background-color: #0D5EAF;
-    margin-inline: 10rem;
-    padding: 0.5rem;
-    justify-content: center;
-    border: #d2d7df 2px solid;
-    margin-bottom: 3rem;
-    
-}
 
 .nav {
     margin-top: 20px;
@@ -124,18 +107,71 @@ p{
 .link {
     color:#d2d7df;
     padding: 5px 10px 5px 10px;
-    background-color: #7f7880;
+    background-color: #4a4854;
     border-radius: 10px; 
     display: flex;
     flex-direction: column; 
 }
 
-
-
 .aktiver-link{
     color:#fff;
    box-shadow: 0px 8px #4a4854;
+   background-color: #7f7880;
 }
+
+.in_text_link{
+    color:#d2d7df;
+    background-color: #4a4854;
+    padding: 0.2rem;
+    margin: 0.3rem;
+    border-radius: 5px;
+}
+
+
+.unternav li{
+    text-decoration: none;
+    color: currentColor;
+    list-style-type:lower-greek;
+    text-align: start;
+    list-style-position: inside;
+    padding: 0.5rem;
+    border-collapse: collapse;
+}
+
+.unternav ul{
+    color: rgb(255, 255, 255);
+    display: block;
+    background-color: #0D5EAF;
+    margin-inline: 10rem;
+    
+    justify-content: center;
+    border: #d2d7df 2px solid;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+.unternav li:hover{
+    transition: all 0.5s;
+    background-color:#073c80;
+}
+
+.unternav img{
+    display: none;
+}
+
+.unternav :active + img {
+    display: block;
+    transition: all 0.5s;
+    background-color:#073c80;
+}
+
+.ueberschrift{
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'ceasar';
+    margin-top: 2rem;
+}
+
 
 .trainer {
     padding-left: 2em;
@@ -145,20 +181,8 @@ p{
     flex-wrap: wrap;
     align-content: space-around;
     gap: 3em;
-    
     margin-bottom: 2em;
-    
 }
-
-
-
-.ueberschrift{
-    color: #fff;
-    font-size: 3rem;
-    font-family: 'ceasar';
-}
-
-
 
 .container {
     width: min-content;
@@ -168,10 +192,10 @@ p{
     justify-content: center;
     align-items: center;  
     position: relative;
-    border-radius: 10px;
-    border: 5px solid #d2d7df;
+    border: 2px solid #d2d7df;
     overflow: hidden;
     background-color: #fff;
+    flex-grow: 0;
 }
 
 .namen {
@@ -190,12 +214,15 @@ p{
 .container:hover .namen {
     opacity: 1;
     transition: all 1s;
-    
 }
 
 .container:hover{
-    border: 5px solid #ffffff;
+    border: 2px solid #ffffff;
     transition: all 1s;
+}
+
+.container:hover img{
+    color: hsla(240, 80%, 80%, 0.3);
 }
 
 .poseidon{
@@ -204,6 +231,7 @@ p{
     font-weight: bold;
     margin-bottom: 80px;
 }
+
 
 .menu{
     display: flex;
@@ -216,8 +244,13 @@ p{
     text-align:left;
     padding: 1rem 2rem 1rem 1rem;
     background-color: #0D5EAF;
-    border-radius: 10px;
-    
+    margin: 10px;
+    border: hsla(240, 80%, 80%, 0) 2px double;
+}
+
+.menu tr{
+    gap: 10px;
+    color: brown;
 }
 
 .menu th{
@@ -238,15 +271,100 @@ p{
 }
 
 
+.map_box {
+    color:#ffffff;
+    display: flex;
+    justify-content:space-between;
+    gap: 1rem;
+   margin-top: 2rem;
+}
+
+.map {
+    width: 65%;
+    border:  #d2d7df 2px solid;
+    background-color: #bed8f1;
+}
+
+.team p{
+    text-align: left;
+    max-width: 500px;
+    font-family: 'romanica';
+    padding: 1rem;
+}
+
+.map_text {
+    width: 35%;
+    border:  #d2d7df 2px solid;
+    background-color: #0D5EAF;
+    padding: 2px;
+    padding-left: 10px;
+}
+
+.map_text p{
+    color: rgb(255, 255, 255);
+    text-align: left;
+    flex-grow: 0;
+    max-width: 230px;
+    font-family: 'romanica';
+}
+
+
+.index{
+    background-color:#073c80;
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.index p{
+    min-width: 100%;
+    color:#fff;
+}
+
+.datenschutz{
+    max-width: 80%;
+    margin-left: 80px;
+    padding-inline: 20px;
+}
+
+.link_datenschutz{
+    margin-top: 20rem;
+}
+
+.team{
+    background-color: #0D5EAF;
+}
+
+.blau h3{
+    color: #fff;
+    margin-top: 3rem;
+}
+
+.blau p{
+    color: #fff;
+    margin-top: 10rem;
+}
+
+.philo {
+    background-color: #5d88cd;
+    padding: 0;
+    margin: 0;
+    height: 176px;
+}
+
+.platon {
+    font-size: 2.3rem;
+}
+
 
 .zeitplan{
     margin: 100px auto;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
     width: 100%;
-    height: 50%;
     border-collapse: collapse;
     border-spacing: 0;
     border-collapse: separate;
-    /* border-radius: 10px;*/
     border: 2px solid #d2d7df;
     background-color: #0D5EAF;
     overflow: hidden;
@@ -256,11 +374,11 @@ p{
     font-family: 'romanica';
     background-color: #073c80;
     color: #fff;
+    height: 3rem;
     padding: 2px;
     padding-left: 10px;
     text-align: left;
     border-bottom: 2px solid #d2d7df;
-    
 }
 
 .zeitplan td{
@@ -279,5 +397,4 @@ p{
 
 .zeitplan td:hover {
     color:#fff;
-
 }
